@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Admin - Manage Appointments</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 2rem; background: #121212; color: #f8b400; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 2rem; }
+    th, td { padding: 8px; border: 1px solid #f8b400; text-align: left; }
+    th { background: #333; }
+    button { background: #f8b400; border: none; padding: 5px 10px; cursor: pointer; border-radius: 4px; }
+    button:hover { background: #d19e00; }
+</style>
+</head>
+<body>
+
+<h1>Admin - Manage Appointments</h1>
+
+<table id="appointmentsTable">
+    <thead>
+        <tr>
+            <th>First Name</th><th>Last Name</th><th>Phone</th>
+            <th>Date</th><th>Time</th><th>Delete</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+async function loadAppointments() {
+  try {
+    const res = await fetch('http://localhost:3000/api/appointments');
+    if (!res.ok) throw new Error('Failed to fetch appointments');
+    const appointments = await res.json();
+
+    const tbody = document.querySelector('#appointmentsTable tbody');
+    tbody.innerHTML = '';
+
+    appointments.forEach((appt) => {
+      // صياغة التاريخ مع أصفار بادئة ليظهر مثلاً 01/09/2025
+      const dateStr = `${appt.day.toString().padStart(2,'0')}/${appt.month.toString().padStart(2,'0')}/${appt.year}`;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${appt.firstName}</td>
+        <td>${appt.lastName}</td>
+        <td>${appt.phone}</td>
+        <td>${dateStr}</td>
+        <td>${appt.hour}:${appt.minute} ${appt.ampm}</td>
+        <td><button onclick="deleteAppointment(${appt.id})">Delete</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  } catch (error) {
+    alert('Error loading appointments: ' + error.message);
+  }
+}
+
+async function deleteAppointment(id) {
+  try {
+    const res = await fetch(`http://localhost:3000/api/appointments/${id}`, {
+      method: 'DELETE'
+    });
+    if (!res.ok) throw new Error('Failed to delete');
+    loadAppointments();
+  } catch (error) {
+    alert('Error deleting appointment: ' + error.message);
+  }
+}
+
+// تحميل المواعيد عند فتح الصفحة
+loadAppointments();
+
+  const password = prompt("Enter admin password:");
+  if (password !== "Aa909090") {
+    alert("Wrong password!");
+    window.location.href = "index.html"; // أو أغلق الصفحة
+  }
+
+</script>
+
+</body>
+</html>

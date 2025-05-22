@@ -1,0 +1,97 @@
+   body {
+            background-color: #121212;
+            color: #f8b400;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -1;
+            background-image: url('images/2.jpg'); /* ضع مسار الصورة هنا */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.18; /* درجة الشفافية، يمكنك تعديلها */
+            pointer-events: none;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 900;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #ffbf00;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: none;
+            background-color: #222;
+            color: #f8b400;
+            font-size: 1rem;
+        }
+
+        input::placeholder {
+            color: #f8b400;
+        }
+
+        .icon-input {
+            position: relative;
+        }
+
+        .icon-input input,
+        .icon-input select {
+            padding-left: 2rem;
+        }
+
+        .icon-input .icon {
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #f8b400;
+            font-size: 1.2rem;
+            pointer-events: none;
+        }
+
+        button.submit-btn {
+            grid-column: 1 / -1;
+            justify-self: center;
+            padding: 0.6rem 2rem;
+            font-size: 1rem;
+            border: 2px solid #f8b400;
+            background: transparent;
+            color: #f8b400;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button.submit-btn:hover {
+            background-color: #f8b400;
+            color: #121212;
+        }

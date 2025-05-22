@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book Now</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="bookingStyle.css" />
+</head>
+
+<body>
+    <div class="fixed-logo">
+        <img src="images/12.png" alt="Logo" class="logo-img" />
+        <div>
+            <div class="logo-text">Barber Shop</div>
+            <div class="logo-subtext">Best Barber Web Temp</div>
+        </div>
+    </div>
+
+    <div class="content" style="margin-top: 150px;">
+        <img src="images/12.png" alt="Logo" class="center-logo"
+            style="width: 220px; height: 220px; display: block; margin: -120px auto -20px auto;" />
+        <h1>Book Now</h1>
+        <p class="subtitle">Here is the best haircuts for men!</p>
+    </div>
+
+    <form id="bookingForm">
+        <label for="firstName" style="border: 2px solid #f8b400; border-radius: 6px; padding: 4px 8px;">First
+            Name</label>
+        <div class="icon-input">
+            <span class="icon">👤</span>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+        </div>
+
+        <label for="lastName" style="border: 2px solid #f8b400; border-radius: 6px; padding: 4px 8px;">Last Name</label>
+        <div class="icon-input">
+            <span class="icon">👤</span>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+        </div>
+
+        <label for="phone" style="border: 2px solid #f8b400; border-radius: 6px; padding: 4px 8px;">Phone Number</label>
+        <div class="icon-input">
+            <span class="icon">📞</span>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+        </div>
+
+        <label style="border: 2px solid #f8b400; border-radius: 6px; padding: 4px 8px;">Date</label>
+        <div style="display: flex; gap: 0.5rem;">
+            <select name="day" required>
+                <!-- يوم -->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="month" required>
+                <!-- شهر -->
+                <option value="01">1</option>
+                <option value="02">2</option>
+                <option value="03">3</option>
+                <option value="04">4</option>
+                <option value="05">5</option>
+                <option value="06">6</option>
+                <option value="07">7</option>
+                <option value="08">8</option>
+                <option value="09">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select name="year" required>
+                <!-- سنة -->
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+                <option value="2034">2034</option>
+                <option value="2035">2035</option>
+            </select>
+        </div>
+
+        <label style="border: 2px solid #f8b400; border-radius: 6px; padding: 4px 8px;">Time</label>
+        <div style="display: flex; gap: 0.5rem;">
+            <select name="hour" required>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+            </select>
+            <select name="minute" required>
+                <option value="00">00</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+            </select>
+            <select name="ampm" required>
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Book Now</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('bookingForm');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const data = {
+                firstName: form.firstName.value.trim(),
+                lastName: form.lastName.value.trim(),
+                phone: form.phone.value.trim(),
+                day: form.day.value,
+                month: form.month.value,
+                year: form.year.value,
+                hour: form.hour.value,
+                minute: form.minute.value,
+                ampm: form.ampm.value
+            };
+
+            try {
+                const res = await fetch('http://localhost:3000/api/book', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                if (res.ok) {
+                    alert('Appointment booked successfully!');
+                    form.reset();
+                } else {
+                    alert('Error booking appointment.');
+                }
+            } catch (error) {
+                alert('Server error: ' + error.message);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

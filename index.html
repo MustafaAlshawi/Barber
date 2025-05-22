@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barber Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- الشعار والاسم المثبتين -->
+    <div class="fixed-logo">
+        <img src="images/12.png" alt="Logo" class="logo-img" />
+        <div>
+            <div class="logo-text">Barber Shop</div>
+            <div class="logo-subtext">Best Barber Web Temp</div>
+        </div>
+    </div>
+    <nav style="position: fixed;">
+        <button class="active" data-target="section1" aria-label="Section 1"></button>
+        <button data-target="section2" aria-label="Section 2"></button>
+        <button data-target="section3" aria-label="Section 3"></button>
+        <button data-target="section4" aria-label="Section 4"></button>
+        <div class="nav-third-line"></div>
+    </nav>
+    </nav>
+
+    <section id="section1" class="section">
+        <img src="images/2.jpg" alt="Section 1 Hintergrund" class="bg-img" />
+        <div class="content">
+            <img src="images/12.png" alt="Logo" class="center-logo"
+                style="width: 220px; height: 220px; display: block; margin: -200px auto -40px auto;" />
+            <h1>Barber Shop</h1>
+            <p>SINCE 1973 <strong>BARBER FOR MEN</strong> MMTV</p>
+            <p>Here is the most beautiful and best site that offers you the best haircuts</p>
+            <a href="booking.html"><button>Book Now</button></a>
+        </div>
+
+        <div
+            style="position: absolute; left: 0; right: 0; bottom: -10px; width: 100%; display: flex; justify-content: center; z-index: 2;">
+            <!-- هنا المربعات الثلاثة -->
+            <div class="info-box" style="flex: 1 1 auto; background: none; box-shadow: none;">
+
+                <div class="info-box"
+                    style="min-width: 460px; flex: 1 1 270px; background: none; box-shadow: 0 0 0 3px #f8b400;">
+                    <span class="icon">🕒</span>
+                    <div>
+                        <div class="info-title">Open Time</div>
+                        <div class="info-subtitle">10:00 PM - 08:00 AM</div>
+                    </div>
+                </div>
+                <div class="info-box"
+                    style="min-width: 460px; flex: 1 1 270px; background: none; box-shadow: 0 0 0 3px #f8b400;">
+                    <span class="icon">📍</span>
+                    <div>
+                        <div class="info-title">Our Location</div>
+                        <div class="info-subtitle">My City - Street Name</div>
+                    </div>
+                </div>
+                <div class="info-box"
+                    style="min-width: 460px; flex: 1 1 270px; background: none; box-shadow: 0 0 0 3px #f8b400;">
+                    <span class="icon">📞</span>
+                    <div>
+                        <div class="info-title">Contact Us</div>
+                        <div class="info-subtitle">+20 109 841 5142</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Responsive info boxes for mobile/tablet -->
+            <div class="info-boxes-responsive">
+                <div class="info-box-single">
+                    <span class="icon">🕒</span>
+                    <div>
+                        <div class="info-title">Open</div>
+                        <div class="info-subtitle">10:00 PM - 08:00 AM</div>
+                    </div>
+                </div>
+                <div class="info-box-single">
+                    <span class="icon">📍</span>
+                    <div>
+                        <div class="info-title">Location</div>
+                        <div class="info-subtitle">My City - Street Name</div>
+                    </div>
+                </div>
+                <div class="info-box-single">
+                    <span class="icon">📞</span>
+                    <div>
+                        <div class="info-title">Contact</div>
+                        <div class="info-subtitle">+20 109 841 5142</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section2" class="section">
+        <div class="content about-us">
+            <div class="text-block">
+                <h2>About Us</h2>
+                <p class="highlight">Here is the most beautiful and best site that offers you the best haircuts.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur unde repellendus totam. Sint
+                    consequatur eveniet praesentium quos ullam illum iste temporibus necessitatibus rem atque sed
+                    consequuntur, sapiente aliquam nobis blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Obcaecati magnam culpa sequi voluptatem perspiciatis aperiam, vitae facilis assumenda quidem
+                    blanditiis officiis saepe alias earum molestias animi rerum eum consequatur illo?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur unde repellendus totam. Sint
+                    consequatur eveniet praesentium quos ullam illum iste temporibus necessitatibus rem atque sed
+                    consequuntur, sapiente aliquam nobis blanditiis. Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Obcaecati magnam culpa sequi voluptatem perspiciatis aperiam, vitae facilis assumenda quidem
+                    blanditiis officiis saepe alias earum molestias animi rerum eum consequatur illo?</p>
+            </div>
+            <div class="images-block">
+                <img src="images/3.jpg" alt="Kid Haircut" class="img img1" />
+                <img src="images/4.jpg" alt="Man Beard" class="img img2" />
+                <img src="images/6.jpg" alt="Older Man Hair" class="img img3" />
+            </div>
+        </div>
+    </section>
+
+    <section id="section3" class="section">
+        <img src="images/5.jpg" alt="Section 3 Hintergrund" class="bg-img" />
+        <div class="content">
+            <h2>Unsere Haarschnitte</h2>
+            <div class="gallery-container" style="position: relative; width: 100%;">
+                <!-- السهم اليسار -->
+                <button id="scrollLeft" aria-label="Scroll Left" class="scroll-btn left-btn">&lt;</button>
+                <!-- معرض الصور -->
+                <div class="gallery">
+                    <div class="gallery-card">
+                        <img src="images/3.jpg" alt="Curly Quiff" />
+                    </div>
+                    <div class="gallery-card">
+                        <img src="images/4.jpg" alt="Crew Cut" />
+                    </div>
+                    <div class="gallery-card">
+                        <img src="https://i.imgur.com/43hDnbX.jpg" alt="Undercut Fade" />
+                    </div>
+                    <div class="gallery-card">
+                        <img src="https://i.imgur.com/fGk6kiO.jpg" alt="Textured High" />
+                    </div>
+                    <div class="gallery-card">
+                        <img src="https://i.imgur.com/fGk6kiO.jpg" alt="Textured High" />
+                    </div>
+                    <div class="gallery-card">
+                        <img src="https://i.imgur.com/fGk6kiO.jpg" alt="Textured High" />
+                    </div>
+                </div>
+                <!-- السهم اليمين -->
+                <button id="scrollRight" aria-label="Scroll Right" class="scroll-btn right-btn">&gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4" class="section">
+        <img src="images/7.jpg" alt="Map Background" class="bg-img" />
+        <div class="content" style="max-width: 900px; width: 100%; ; padding: 2rem; border-radius: 12px;">
+            <h2 style="color: #f8b400; text-align: center; margin-bottom: 1.5rem;">Find Us</h2>
+            <p style="color: #ccc; text-align: center; margin-bottom: 2rem;">You can find us at our location shown
+                below.</p>
+            <div style="width: 100%; height: 450px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d145.49647042213866!2d9.662984710876216!3d54.304949270013246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b3a50044468019%3A0x1f506b57bc5758a5!2sFachwerkhaus!5e0!3m2!1sde!2sde!4v1747860133069!5m2!1sde!2sde"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" style="border:0;"
+                    allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #1a1a1a; color: #ccc; padding: 3rem 1rem 1rem 1rem; font-size: 0.95rem;">
+        <div
+            style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+
+            <!-- العمود 1 -->
+            <div style="flex: 1 1 260px; display: flex; gap: 12px; align-items: flex-start;">
+                <img src="images/12.png" alt="Logo" style="width: 70px; height: 70px; object-fit: contain;">
+                <div style="display: flex; flex-direction: column; justify-content: center;">
+                    <div style="font-weight: bold; font-size: 1.5rem; color: #f8b400;">Barber Shop</div>
+                    <div style="font-size: 0.95rem; color: #aaa; margin-top: 4px;">Best Barber in Rendsburg</div>
+                </div>
+            </div>
+
+            <!-- العمود 2 -->
+            <div style="flex: 1 1 200px;">
+                <h4 style="color: #f8b400; margin-bottom: 0.5rem;">Contact Info</h4>
+
+                <p style="display: flex; align-items: center; gap: 8px;">
+                    <img src="icons/2.png" alt="Location" style="width: 20px; height: 20px;">
+                    My City – Street Name
+                </p>
+
+                <p style="display: flex; align-items: center; gap: 8px;">
+                    <img src="icons/3.png" alt="Phone" style="width: 20px; height: 20px;">
+                    +20 109 841 5142
+                </p>
+
+                <p style="display: flex; align-items: center; gap: 8px;">
+                    <img src="icons/1.png" alt="Mobile" style="width: 20px; height: 20px;">
+                    +20 109 841 5142
+                </p>
+
+                <p style="display: flex; align-items: center; gap: 8px;">
+                    <img src="icons/4.png" alt="Email" style="width: 20px; height: 20px;">
+                    omranalazroony@gmail.com
+                </p>
+            </div>
+
+
+            <!-- العمود 3 -->
+            <div style="flex: 1 1 160px;">
+                <h4 style="color: #f8b400; margin-bottom: 0.5rem;">Helpful Links</h4>
+                <p><a href="#section1" style="color: #ccc; text-decoration: none;">Home</a></p>
+                <p><a href="#section2" style="color: #ccc; text-decoration: none;">About Us</a></p>
+                <p><a href="#section3" style="color: #ccc; text-decoration: none;">Unsere Haarschnitte</a></p>
+                <p><a href="#section4" style="color: #ccc; text-decoration: none;">Find Us</a></p>
+            </div>
+
+            <!-- العمود 4 -->
+            <div style="display: flex; gap: 10px; font-size: 1.4rem;">
+                <a href="https://www.facebook.com/اسم-صفحتك" target="_blank">
+                    <img src="icons/facebook.webp" alt="Facebook" style="width: 28px; height: 28px;">
+                </a>
+                <a href="https://www.instagram.com/اسم-حسابك" target="_blank">
+                    <img src="icons/Instagram.webp" alt="instagram" style="width: 28px; height: 28px;">
+                </a>
+                <a href="https://www.whatsapp.com/قناتك" target="_blank">
+                    <img src="icons/WhatsApp.webp" alt="whatsapp" style="width: 28px; height: 28px;">
+                </a>
+            </div>
+
+
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem; border-top: 1px solid #333; padding-top: 1rem; color: #888;">
+            Made By Mustafa_Aliraqi 2025©
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
